@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Delete user</title>
+</head>
+    <body>
+        <form action="#" th:action="@{/delete}" method="post" th:object="${user}">
+        
+            <table>				
+				 <tr>
+                     <td>
+                    	<select th:field="*{id}">
+							<option value="">Select user</option>
+							<option th:each="user : ${users}" th:value="${user.id}" th:text="${user.username}"></option>
+						</select>
+					</td>	
+                </tr>   
+				
+				<tr>
+                    <td><button type="submit">Delete</button></td>
+                </tr>
+				 </table>
+        </form>
+    </body>
+</html>

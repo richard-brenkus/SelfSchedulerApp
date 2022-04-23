@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Success</title>
+<style type="text/css">
+    span {
+        display: inline-block;
+        width: 200px;
+        text-align: left;
+    }
+</style>
+</head>
+<body>
+<div align="center">
+    <h2>Date(s) submitted successfully</h2>
+    <table>
+    	<tr>
+    		<td>Selected date(s):   </td>
+    		<td th:text="${XdatePicker.dates}"/>
+    	</tr>
+    	
+    </table>
+</div>
+<div>
+	<h2></h2>
+</div>
+<div align="center">
+   <a href="user/userIndex">Go back to user index page</a>
+</div> 
+<div>
+	<h2></h2>
+</div>    
+<div align="center">
+ 	<form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>   
+
+
+</body>
+</html>
